@@ -4,7 +4,8 @@ export default class Store {
   @observable domainZonesChecker = [
     {name: '.com', isChecked: false},
     {name: '.ru', isChecked: true},
-    {name: '.su', isChecked: true}
+    {name: '.su', isChecked: false},
+    {name: '.com.ua', isChecked: false}
   ];
 
   @observable domainsState = [];
@@ -41,7 +42,7 @@ export default class Store {
       .catch((error) => console.log(`Error: ${error}`) )
     
     Promise.all(urls.map(grabContent));
-    // grabContent(urls);
+
   }
 
   updateZone(ndx) {
