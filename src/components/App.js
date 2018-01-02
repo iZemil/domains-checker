@@ -5,22 +5,13 @@ import CheckList from './CheckList';
 // import RandExp from 'randexp';
 
 export default class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      list: 'generatedList'
-    }
-  }
-
-
   render() {
     return (
       <MuiThemeProvider>
         <div className="app">
           <h1>Domains checker</h1>
-          <AppForm />
-          <CheckList />
+          <AppForm store={this.props.store} />
+          <CheckList store={this.props.store} />
         </div>
       </MuiThemeProvider>
     );

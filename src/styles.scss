@@ -6,4 +6,7 @@ body {
 
 .app {
   max-width: 480px;
+  &-form {
+    margin-bottom: 20px;
+  }
 }
